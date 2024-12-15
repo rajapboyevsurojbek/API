@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 12px;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+.card button {
+  padding: 8px;
+  background: dodgerblue;
+  color: #fff;
+  border: none;
+}
+
+.btn__seemore {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background: dodgerblue;
+  color: #fff;
+  border: none;
+  margin-top: 12px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.loading {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 50px;
+  grid-gap: 12px;
+}
+.loading__item {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+.loading__image {
+  width: 100%;
+  height: 250px;
+  background: #ddd;
+}
+.loading__title {
+  width: 80%;
+  height: 30px;
+  margin-top: 12px;
+  background: #ddd;
+}
+.loading__title:last-child {
+  width: 60%;
+}
+.to-left {
+  background: linear-gradient(90deg, #ddd, #aaa, #ddd);
+  background-size: 200%;
+  animation: toLeft 1s linear infinite;
+}
+@keyframes toLeft {
+  to {
+    background-position: 200%;
+  }
+}
+
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
